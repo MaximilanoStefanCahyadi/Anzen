@@ -9,6 +9,7 @@ import Dashboard from "@/pages/Dashboard";
 import LogsPage from "@/pages/LogsPage";
 import DoorControlPage from "@/pages/DoorControlPage";
 import RegisterFacePage from "@/pages/RegisterFacePage";
+import GuestAccessPage from "@/pages/GuestAccessPage";
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { user, loading } = useAuth();
@@ -48,6 +49,7 @@ function AppRoutes() {
         <Route path="logs" element={<LogsPage />} />
         <Route path="door" element={<DoorControlPage />} />
         <Route path="register" element={<RegisterFacePage />} />
+        <Route path="guest" element={<GuestAccessPage />} />
       </Route>
     </Routes>
   );

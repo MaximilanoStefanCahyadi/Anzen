@@ -2,7 +2,7 @@ import React from "react";
 import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
-import { LayoutDashboard, LogOut, ShieldCheck, UserPlus, DoorOpen } from "lucide-react";
+import { LayoutDashboard, LogOut, ShieldCheck, UserPlus, DoorOpen, QrCode } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export default function Layout() {
@@ -24,6 +24,7 @@ export default function Layout() {
     { href: "/logs", label: "Access Logs", icon: ShieldCheck },
     { href: "/door", label: "Door Control", icon: DoorOpen },
     { href: "/register", label: "Register Face", icon: UserPlus },
+    { href: "/guest", label: "Guest QR", icon: QrCode },
   ];
 
   return (
