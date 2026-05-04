@@ -1,35 +1,47 @@
-#include <Servo.h>
+// ==========================================
+// KODE ARDUINO: DOOR LOCK SOLENOIDA + RELAY
+// ==========================================
 
-Servo pintuServo;
-const int pinServo = 9;
+// --- KONFIGURASI ---
+const int relayPin = 9;          // Pin Arduino yang terhubung ke pin 'IN' pada Relay
+const int unlockTime = 3000;     // Waktu pintu dibiarkan terbuka: 3000 milidetik (3 detik)
 
 void setup() {
-  // Memulai komunikasi Serial dengan baud rate 9600
+  // 1. Mulai komunikasi jalur Serial (USB) dengan Python di kecepatan 9600
   Serial.begin(9600);
   
-  // Inisialisasi Servo
-  pintuServo.attach(pinServo);
+  // 2. Atur pin 9 sebagai pin Output (pengirim sinyal listrik)
+  pinMode(relayPin, OUTPUT);
   
-  // Posisikan servo pada 0 derajat (Pintu Terkunci) saat pertama kali menyala
-  pintuServo.write(0); 
-  
-  Serial.println("Arduino Mega Siap. Menunggu perintah dari Python...");
+  // 3. Pastikan Relay dalam keadaan MATI saat Arduino baru dinyalakan
+  digitalWrite(relayPin, HIGH); 
 }
 
 void loop() {
-  // Mengecek apakah ada data yang masuk dari kabel USB (dari Python)
+  // Mengecek apakah ada pesan masuk dari kabel USB (dikirim oleh Python)
   if (Serial.available() > 0) {
-    char perintah = Serial.read(); // Membaca 1 karakter yang masuk
+    
+    // Baca satu huruf yang dikirim
+    char command = Serial.read(); 
 
-    // Jika Python mengirim huruf 'O' (Open)
-    if (perintah == 'O' || perintah == 'o') {
-      Serial.println("Perintah diterima: MEMBUKA PINTU");
+    // Jika Python mengirim huruf 'O' (Buka Pintu)
+    if (command == 'O' || command == 'o') {
       
-      pintuServo.write(90); // Putar servo ke 90 derajat (Pintu Terbuka)
-      delay(5000);          // Tahan pintu terbuka selama 5 detik
+      // --- FASE 1: BUKA PINTU ---
+      // Kirim sinyal menyala ke Relay. 
+      // Relay akan bunyi "Cetek!", menyambungkan listrik 11.1V baterai ke Solenoida.
+      digitalWrite(relayPin, LOW);
       
-      pintuServo.write(0);  // Putar kembali ke 0 derajat (Pintu Terkunci)
-      Serial.println("PINTU TERKUNCI KEMBALI");
+      // --- FASE 2: TAHAN ---
+      // Tahan selama 3 detik. 
+      // PERINGATAN: Bagian ini WAJIB ada agar Solenoida Anda tidak meleleh!
+      delay(unlockTime);
+      
+      // --- FASE 3: KUNCI KEMBALI ---
+      // Putus sinyal listrik ke Relay.
+      // Relay mati, aliran listrik dari baterai terputus, per pegas akan mendorong besi Solenoida keluar.
+      digitalWrite(relayPin, HIGH);
+      
     }
   }
 }
