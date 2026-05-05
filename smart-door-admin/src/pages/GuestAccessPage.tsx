@@ -161,14 +161,14 @@ export default function GuestAccessPage() {
                 value={guestName}
                 onChange={(e) => setGuestName(e.target.value)}
                 required
-                className="text-base sm:text-sm"
+                className="text-[16px] md:text-sm"
               />
             </div>
             <div className="space-y-2">
               <label htmlFor="expiry" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Valid For</label>
               <select
                 id="expiry"
-                className="w-full flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-base sm:text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-[16px] md:text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 value={expiryDuration}
                 onChange={(e) => setExpiryDuration(e.target.value)}
               >
