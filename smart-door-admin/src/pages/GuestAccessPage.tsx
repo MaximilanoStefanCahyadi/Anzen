@@ -8,7 +8,7 @@ import { rtdb } from "@/lib/firebase";
 import { useAuth } from "@/contexts/AuthContext";
 import QRCode from "react-qr-code";
 import { format, formatDistanceToNow, isPast } from "date-fns";
-import { QrCode, Trash2, KeyRound, Download, Share2, X } from "lucide-react";
+import { QrCode, Trash2, KeyRound, Download, Share2, X, Loader2 } from "lucide-react";
 
 interface GuestToken {
   id: string;
@@ -161,13 +161,14 @@ export default function GuestAccessPage() {
                 value={guestName}
                 onChange={(e) => setGuestName(e.target.value)}
                 required
+                className="text-base sm:text-sm"
               />
             </div>
             <div className="space-y-2">
               <label htmlFor="expiry" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">Valid For</label>
               <select
                 id="expiry"
-                className="w-full flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                className="w-full flex h-10 items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-base sm:text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                 value={expiryDuration}
                 onChange={(e) => setExpiryDuration(e.target.value)}
               >
@@ -177,9 +178,9 @@ export default function GuestAccessPage() {
                 <option value="604800000">7 Days</option>
               </select>
             </div>
-            <Button type="submit" className="w-full" disabled={loading || !guestName}>
-              <KeyRound className="mr-2 h-4 w-4" />
-              Generate Key
+            <Button type="submit" className="w-full transition-all" disabled={loading || !guestName}>
+              {loading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <KeyRound className="mr-2 h-4 w-4" />}
+              {loading ? "Generating..." : "Generate Key"}
             </Button>
           </form>
         </CardContent>
@@ -276,8 +277,14 @@ export default function GuestAccessPage() {
 
       {/* QR Code Modal Overlay */}
       {generatedToken && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
-          <Card className="w-full max-w-sm max-h-[90vh] overflow-y-auto flex flex-col animate-in zoom-in-95 duration-200">
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
+          onClick={() => setGeneratedToken(null)}
+        >
+          <Card 
+            className="w-full max-w-sm max-h-[90vh] overflow-y-auto flex flex-col animate-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="flex justify-between items-center p-3 sm:p-4 border-b border-zinc-100 bg-zinc-50 shrink-0">
               <h3 className="font-bold text-base sm:text-lg text-zinc-900">Guest Access Pass</h3>
               <Button variant="ghost" size="icon" onClick={() => setGeneratedToken(null)} className="h-8 w-8 rounded-full border border-zinc-200 bg-white hover:bg-zinc-100 shrink-0">
