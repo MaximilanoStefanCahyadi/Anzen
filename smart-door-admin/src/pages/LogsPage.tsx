@@ -75,8 +75,8 @@ export default function LogsPage() {
 
     if (isUnknown) {
       return {
-        message: "A waiting visitor or visitor at the lobby door",
-        subtext: "Facial analysis was unable to match against stored family vectors.",
+        message: "Unrecognized visitor at the door",
+        subtext: "Face ID could not match this person to any registered profile.",
         icon: UserX,
         accentClass: "bg-brand-terracotta/10 text-brand-terracotta",
         badgeText: "Unregistered",
@@ -84,8 +84,8 @@ export default function LogsPage() {
     }
 
     return {
-      message: `${log.name.replace(/_/g, ' ')} was warmly welcomed home`,
-      subtext: `Access permitted securely via modern ${log.method || "Face ID"} verification.`,
+      message: `${log.name.replace(/_/g, ' ')} was granted access`,
+      subtext: `Access granted via ${log.method || "Face ID"} verification.`,
       icon: UserCheck,
       accentClass: "bg-brand-sage-light text-brand-sage",
       badgeText: "Verified Resident",
@@ -115,7 +115,7 @@ export default function LogsPage() {
     return (
       <div className="flex flex-col h-[70vh] items-center justify-center space-y-4">
         <div className="h-10 w-10 rounded-full border-4 border-brand-terracotta border-t-transparent animate-spin" />
-        <p className="text-xs font-bold tracking-widest text-neutral-dark/40 uppercase">GATHERING VISITS FEED</p>
+        <p className="text-xs font-bold tracking-widest text-neutral-dark/40 uppercase">LOADING...</p>
       </div>
     );
   }
@@ -126,13 +126,13 @@ export default function LogsPage() {
         <div className="h-12 w-12 rounded-2xl bg-brand-terracotta/10 flex items-center justify-center text-brand-terracotta">
           <UserX className="h-6 w-6" />
         </div>
-        <p className="text-lg font-bold text-neutral-dark">Cloud Connection Sleeping</p>
+        <p className="text-lg font-bold text-neutral-dark">Database Unavailable</p>
         <p className="text-xs text-neutral-dark/50 leading-relaxed">{error}</p>
         <button 
           onClick={() => window.location.reload()}
           className="px-4 py-2 bg-brand-terracotta text-white rounded-2xl text-xs font-bold"
         >
-          Check Synced State
+          Retry
         </button>
       </div>
     );
@@ -144,9 +144,9 @@ export default function LogsPage() {
       {/* Title block with custom filter pills */}
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
-          <span className="text-xs font-bold text-brand-terracotta tracking-wider uppercase">Lately Greeted</span>
-          <h1 className="text-3xl font-extrabold tracking-tight text-neutral-dark">Access Timeline</h1>
-          <p className="text-xs sm:text-sm text-neutral-dark/50 mt-1">A real-time diary of warm greetings and door logs at your home.</p>
+          <span className="text-xs font-bold text-brand-terracotta tracking-wider uppercase">Recent Events</span>
+          <h1 className="text-3xl font-extrabold tracking-tight text-neutral-dark">Access Log</h1>
+          <p className="text-xs sm:text-sm text-neutral-dark/50 mt-1">A real-time log of all door events and access attempts.</p>
         </div>
 
         {/* Filter controls styled as aesthetic pills */}
@@ -161,7 +161,7 @@ export default function LogsPage() {
                   : "text-neutral-dark/60 hover:text-neutral-dark hover:bg-neutral-dark/3"
               }`}
             >
-              {type === "known" ? "Residents" : type === "unknown" ? "Guests" : "All Feeds"}
+              {type === "known" ? "Residents" : type === "unknown" ? "Guests" : "All"}
             </button>
           ))}
         </div>
@@ -174,9 +174,9 @@ export default function LogsPage() {
             <div className="mx-auto h-12 w-12 rounded-full bg-brand-sage-light flex items-center justify-center text-brand-sage mb-4">
               <Camera className="h-5 w-5" />
             </div>
-            <h3 className="text-base font-bold text-neutral-dark">No Greeted Visages Here Yet</h3>
+            <h3 className="text-base font-bold text-neutral-dark">No Events Yet</h3>
             <p className="text-xs text-neutral-dark/40 max-w-xs mx-auto mt-2">
-              Whenever the door detects eyes or remote locks are issued, they'll write elegant records here.
+              Door events, face recognition results, and manual overrides will appear here.
             </p>
           </div>
         ) : (
@@ -218,7 +218,7 @@ export default function LogsPage() {
                         {info.badgeText}
                       </span>
                       <span className="text-[10px] text-neutral-dark/40 font-semibold flex items-center justify-center sm:justify-start gap-1">
-                        <MapPin className="h-3 w-3 stroke-[2] inline" /> LOBBY CAMERA NODE
+                        <MapPin className="h-3 w-3 stroke-[2] inline" /> FRONT DOOR
                       </span>
                     </div>
 
@@ -259,7 +259,7 @@ export default function LogsPage() {
               className="bg-white hover:bg-neutral-dark/4 border-neutral-dark/5 rounded-2xl font-bold py-5 px-6 text-xs text-neutral-dark/60 shadow-sm"
             >
               <Layers className="mr-2 h-4 w-4 text-neutral-dark/40" />
-              Load Older Diary History
+              Load More
             </Button>
           </div>
         )}

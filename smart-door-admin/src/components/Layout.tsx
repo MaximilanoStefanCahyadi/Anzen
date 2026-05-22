@@ -344,30 +344,30 @@ export default function Layout() {
                 </h2>
                 <div className="flex items-center gap-1.5 mt-1 bg-brand-sage-light px-3 py-1 rounded-full border border-brand-sage/10">
                   <span className="h-1.5 w-1.5 rounded-full bg-brand-sage animate-pulse" />
-                  <span className="text-[10px] text-brand-sage font-extrabold tracking-wide uppercase">Safe & Connected</span>
+                  <span className="text-[10px] text-brand-sage font-extrabold tracking-wide uppercase">Connected</span>
                 </div>
               </div>
 
               {/* Detail Information Area */}
               <div className="space-y-4 py-4 border-t border-b border-neutral-dark/5 text-neutral-dark">
                 <div className="flex items-center justify-between text-xs font-semibold">
-                  <span className="text-neutral-dark/40">Core Security Node</span>
-                  <span className="text-neutral-dark font-bold">Active Edge</span>
+                  <span className="text-neutral-dark/40">System Status</span>
+                  <span className="text-neutral-dark font-bold">Online</span>
                 </div>
                 <div className="flex items-center justify-between text-xs font-semibold">
-                  <span className="text-neutral-dark/40">Lobby Companion</span>
-                  <span className="text-neutral-dark font-bold">Composed</span>
+                  <span className="text-neutral-dark/40">Edge Hub</span>
+                  <span className="text-neutral-dark font-bold">Active</span>
                 </div>
                 <div className="flex items-center justify-between text-xs font-semibold">
-                  <span className="text-neutral-dark/40">Facial Profiles</span>
+                  <span className="text-neutral-dark/40">Enrolled Faces</span>
                   <span className="text-brand-sage font-extrabold bg-brand-sage-light px-2.5 py-0.5 rounded-md">
-                    {registeredFacesCount} Active Vectors
+                    {registeredFacesCount} profiles
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-xs font-semibold">
                   <span className="text-neutral-dark/40">Encryption</span>
                   <span className="text-[10px] font-mono font-bold bg-neutral-dark/5 text-neutral-dark/70 px-1.5 py-0.5 rounded">
-                    RT-AES-256
+                    AES-256
                   </span>
                 </div>
               </div>
@@ -382,7 +382,7 @@ export default function Layout() {
                   className="w-full text-sm font-extrabold justify-center text-brand-terracotta hover:text-white bg-brand-terracotta/10 hover:bg-brand-terracotta rounded-2xl py-6 flex items-center gap-2 border border-brand-terracotta/20 transition-all duration-200 cursor-pointer"
                 >
                   <LogOut className="h-4 w-4 stroke-[2.5]" />
-                  Sign Out of Lock
+                  Sign Out
                 </Button>
               </div>
 
