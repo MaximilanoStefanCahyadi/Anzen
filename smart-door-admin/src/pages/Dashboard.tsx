@@ -21,6 +21,16 @@ import { useAuth } from "@/contexts/AuthContext";
 import { Link } from "react-router-dom";
 import { useDoorControl } from "@/hooks/useDoorControl";
 
+const GREETINGS = [
+  { text: "Good morning", lang: "EN" },
+  { text: "早上好", lang: "ZH" },
+  { text: "おはようございます", lang: "JA" },
+  { text: "Buenos días", lang: "ES" },
+  { text: "Selamat pagi", lang: "ID" },
+  { text: "좋은 아침입니다", lang: "KO" },
+  { text: "صباح الخير", lang: "AR" },
+];
+
 export default function Dashboard() {
   const { user } = useAuth();
   const [stats, setStats] = useState({
@@ -35,6 +45,40 @@ export default function Dashboard() {
     arduino: false,
     database: false,
   });
+
+  // Typewriter greeting
+  const [typedText, setTypedText] = useState("");
+  const [greetingIndex, setGreetingIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const displayName = user?.email?.split("@")[0] || "Admin";
+
+  useEffect(() => {
+    const current = GREETINGS[greetingIndex];
+    const fullText =
+      current.lang === "AR"
+        ? `صباح الخير، ${displayName}`
+        : `${current.text}, ${displayName}`;
+
+    let timer: ReturnType<typeof setTimeout>;
+
+    if (isDeleting) {
+      timer = setTimeout(() => setTypedText((p) => p.slice(0, -1)), 35);
+    } else {
+      timer = setTimeout(
+        () => setTypedText(fullText.slice(0, typedText.length + 1)),
+        75
+      );
+    }
+
+    if (!isDeleting && typedText === fullText) {
+      timer = setTimeout(() => setIsDeleting(true), 5000);
+    } else if (isDeleting && typedText === "") {
+      setIsDeleting(false);
+      setGreetingIndex((p) => (p + 1) % GREETINGS.length);
+    }
+
+    return () => clearTimeout(timer);
+  }, [typedText, isDeleting, greetingIndex, displayName]);
 
   const lastSeenRef = useRef<number>(0);
   const healthIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
@@ -145,15 +189,21 @@ export default function Dashboard() {
 
   return (
     <div className="space-y-6 max-w-7xl mx-auto pb-32 sm:pb-36 animate-in fade-in duration-500">
-      {/* Header */}
-      <div className="mb-4 sm:mb-6 text-right flex flex-col items-end">
-        <span className="text-[9px] font-extrabold text-brand-terracotta tracking-widest uppercase block mb-0.5">
+      {/* Typewriter greeting header */}
+      <div className="mb-4 sm:mb-6 text-right flex flex-col items-end select-none">
+        <span className="text-[9px] font-extrabold text-brand-terracotta tracking-widest uppercase block mb-1">
           ANZEN SMART LABS
         </span>
-        <h1 className="text-2xl sm:text-3xl font-extrabold text-neutral-dark tracking-tight leading-none">
-          Welcome back,{" "}
-          <span className="text-brand-terracotta font-black">
-            {user?.email?.split("@")[0] || "Admin"}
+        <h1
+          className="text-2xl sm:text-3xl font-extrabold text-neutral-dark tracking-tight leading-none min-h-[1.75rem] sm:min-h-[2.25rem] flex items-center justify-end"
+          dir={GREETINGS[greetingIndex].lang === "AR" ? "rtl" : "ltr"}
+        >
+          <span className="text-[#3D3A38]">{typedText}</span>
+          <span
+            className="text-brand-terracotta font-normal animate-pulse ml-0.5"
+            style={{ animationDuration: "0.8s" }}
+          >
+            |
           </span>
         </h1>
       </div>
