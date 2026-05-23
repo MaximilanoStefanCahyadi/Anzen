@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-brand-bg: #f1e8d7; /* Rich textured warm light cream-yellow background */
+  --color-brand-cream-light: #fbf6f0; /* Off-White to very light cream for cards to pop */
+  --color-brand-sidebar: #fcf7f0; /* Clean premium glossy white sidebar */
+  --color-brand-terracotta: #d87756; /* Soft Coral-Red */
+  --color-brand-terracotta-hover: #D6654A; 
+  --color-brand-sage: #6C8069; /* Deep Sage */
+  --color-brand-sage-light: #E6EBE5; /* Soft Deep Sage light background tint */
+  --color-neutral-dark: #3D3A38; /* Deep Bark text/icons */
+}
+
+/* Default styles for comfortable cozy rendering */
+body {
+  background-color: #f1e8d7;
+  color: #3D3A38;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+/* Fine-grain matte paper/stone texture using custom fractals */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.045;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Custom friendly styles */
+.cozy-transition {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cozy-card {
+  background-color: #fbf6f0;
+  border-radius: 1.5rem; /* rounded-3xl/2xl style */
+  border: 1px solid rgba(61, 58, 56, 0.04);
+  box-shadow: 0 8px 30px -4px rgba(61, 58, 56, 0.03), 0 4px 12px -2px rgba(61, 58, 56, 0.01);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cozy-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 40px -6px rgba(61, 58, 56, 0.06), 0 6px 18px -3px rgba(61, 58, 56, 0.02);
+}
