@@ -6,7 +6,7 @@ serviceAccountKey.json
 coverage/
 .DS_Store
 *.log
-smart-door-admin-past.zip
+*.zip
 *.png
 
 
@@ -25,3 +25,8 @@ smart-door-admin/!.env.example
 # ==========================================
 ai-controller/users/*
 ai-controller/registered_faces/*
+
+# ==========================================
+# 4. ATURAN UNTUK FOLDER ANDROID
+# ==========================================
+smart-door-android/node_modules/
