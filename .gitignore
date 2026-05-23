@@ -1,0 +1,27 @@
+# ==========================================
+# 1. ATURAN UMUM (Sistem Operasi & Editor)
+# ==========================================
+serviceAccountKey.json
+.agent/
+coverage/
+.DS_Store
+*.log
+smart-door-admin-past.zip
+*.png
+
+
+# ==========================================
+# 2. ATURAN UNTUK FOLDER WEB (React/Vite/Node)
+# ==========================================
+smart-door-admin/node_modules/
+bsmart-door-admin/uild/
+smart-door-admin/dist/
+smart-door-admin/.env*
+smart-door-admin/!.env.example
+
+
+# ==========================================
+# 3. ATURAN UNTUK FOLDER HARDWARE (Arduino/PlatformIO/Espressif)
+# ==========================================
+ai-controller/users/*
+ai-controller/registered_faces/*
