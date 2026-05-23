@@ -1,6 +1,25 @@
-opencv-python
-face-recognition
-firebase-admin
-requests
-numpy
-cvzone
+# ==========================================
+# 1. AI, FACE RECOGNITION & COMPUTER VISION
+# ==========================================
+opencv-python==4.9.0.80
+dlib @ file:///C:/MAXI/ASLAB/LEARNING/FaceRecogDoor/ai-controller/dlib-19.22.99-cp310-cp310-win_amd64.whl
+face-recognition==1.3.0
+cvzone==1.6.1
+pyzbar==0.1.9
+numpy==1.26.4
+
+# ==========================================
+# 2. WEB FRAMEWORK & API
+# ==========================================
+Flask==3.1.3
+flask-cors==6.0.2
+
+# ==========================================
+# 3. CLOUD INTEGRATION & DATABASE
+# ==========================================
+firebase_admin==7.1.0
+
+# ==========================================
+# 4. HARDWARE COMMUNICATION (SERIAL)
+# ==========================================
+pyserial==3.5
