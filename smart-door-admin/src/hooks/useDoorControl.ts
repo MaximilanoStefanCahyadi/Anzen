@@ -14,15 +14,6 @@ export function useDoorControl(userEmail: string | null | undefined) {
     try {
       const doorStatusRef = ref(rtdb, "door_status");
       await set(doorStatusRef, "Closed");
-      const logsRef = ref(rtdb, "logs");
-      const autoLogRef = push(logsRef);
-      await set(autoLogRef, {
-        event: "Auto-Locked",
-        timestamp: new Date().toISOString(),
-        user: "System",
-        authenticated: true,
-        method: "Timer",
-      });
     } catch (e) {
       console.error("Auto-lock error:", e);
     }
@@ -70,14 +61,6 @@ export function useDoorControl(userEmail: string | null | undefined) {
             status: "PENDING",
           });
           await set(doorStatusRef, "Unlocked");
-          const logRef = push(logsRef);
-          await set(logRef, {
-            event: "Remote Unlock",
-            timestamp: new Date().toISOString(),
-            user: actor,
-            authenticated: true,
-            method: "Web Console",
-          });
           setMessage("Unlock command sent. Auto-locking in 5s.");
           setStatus("success");
           setTimeout(() => setMessage(null), 3500);

@@ -1,0 +1,5 @@
+{
+  "name": "Anzen Smart Door Admin",
+  "description": "Admin dashboard for Face Recognition Smart Door system with logs, door control, and face registration.",
+  "requestFramePermissions": ["camera"]
+}
