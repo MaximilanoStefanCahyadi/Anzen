@@ -1,20 +1,21 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:27:9-35:20
+INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:23:9-29:20
 	android:grantUriPermissions
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:31:13-47
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:27:13-47
 	android:authorities
 		INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:29:13-64
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:25:13-64
 	android:exported
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:30:13-37
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:28:13-62
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:24:13-62
 manifest
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:1-42:12
-INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:1-42:12
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:1-37:12
+INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:1-37:12
+MERGED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-26:12
 MERGED from [:capacitor-android] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\android\capacitor\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-7:12
 MERGED from [:capacitor-cordova-android-plugins] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:2:1-11:12
 MERGED from [org.apache.cordova:framework:14.0.1] C:\Users\taggh\.gradle\caches\8.14.3\transforms\e47013dec160bb8e8e78795049f410c2\transformed\framework-14.0.1\AndroidManifest.xml:20:1-27:12
@@ -60,8 +61,10 @@ MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\taggh\.gradle\caches\8.
 	xmlns:android
 		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:2:11-69
 application
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:4:5-36:19
-INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:4:5-36:19
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:3:5-30:19
+INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:3:5-30:19
+MERGED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:5-24:19
+MERGED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:11:5-24:19
 MERGED from [:capacitor-cordova-android-plugins] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-9:19
 MERGED from [:capacitor-cordova-android-plugins] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-9:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] C:\Users\taggh\.gradle\caches\8.14.3\transforms\353d69426d62513a7e19e841051a3a44\transformed\emoji2-1.3.0\AndroidManifest.xml:23:5-33:19
@@ -81,59 +84,67 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\ta
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.17.0] C:\Users\taggh\.gradle\caches\8.14.3\transforms\11094a199bb7945826b161d8a9c17beb\transformed\core-1.17.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:9:9-35
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:8:9-35
 	android:label
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:7:9-41
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:6:9-41
 	android:roundIcon
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:8:9-54
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:7:9-54
 	android:icon
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:6:9-43
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:5:9-43
 	android:allowBackup
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:5:9-35
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:4:9-35
 	android:theme
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:10:9-40
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:9:9-40
 activity#com.smartdoor.admin.MainActivity
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:12:9-25:20
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:10:9-21:20
 	android:label
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:15:13-56
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:13:13-56
 	android:launchMode
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:17:13-44
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:15:13-44
 	android:exported
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:18:13-36
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:16:13-36
 	android:configChanges
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:13:13-148
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:11:13-148
 	android:theme
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:16:13-62
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:14:13-62
 	android:name
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:14:13-41
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:12:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:20:13-23:29
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:17:13-20:29
 action#android.intent.action.MAIN
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:21:17-69
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:18:17-69
 	android:name
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:21:25-66
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:18:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:22:17-77
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:19:17-77
 	android:name
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:22:27-74
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:19:27-74
 uses-permission#android.permission.INTERNET
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:40:5-67
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:34:5-67
 	android:name
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:40:22-64
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:34:22-64
 uses-permission#android.permission.CAMERA
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:41:5-65
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:35:5-65
 	android:name
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:41:22-62
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:35:22-62
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:36:5-77
+MERGED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:5-77
+MERGED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:9:5-77
+	android:name
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:36:22-74
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:32:13-34:64
+ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:28:13-112
 	android:resource
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:34:17-51
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:28:75-109
 	android:name
-		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:33:17-67
+		ADDED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml:28:24-74
 uses-sdk
 INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml
+MERGED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
+MERGED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:capacitor-android] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\android\capacitor\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:capacitor-android] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\android\capacitor\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:5:5-44
 MERGED from [:capacitor-cordova-android-plugins] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\capacitor-cordova-android-plugins\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:6:5-44
@@ -210,6 +221,44 @@ MERGED from [androidx.core:core-viewtree:1.0.0] C:\Users\taggh\.gradle\caches\8.
 		INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
 		INJECTED from C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\android\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:5-81
+	android:name
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:7:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:5-68
+	android:name
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:8:22-65
+receiver#com.capacitorjs.plugins.localnotifications.TimedNotificationPublisher
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:9-106
+	android:name
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:12:19-103
+receiver#com.capacitorjs.plugins.localnotifications.NotificationDismissReceiver
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:9-107
+	android:name
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:13:19-104
+receiver#com.capacitorjs.plugins.localnotifications.LocalNotificationRestoreReceiver
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:14:9-23:20
+	android:exported
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:17:13-37
+	android:directBootAware
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:16:13-43
+	android:name
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:15:13-103
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.LOCKED_BOOT_COMPLETED+action:name:android.intent.action.QUICKBOOT_POWERON
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:18:13-22:29
+action#android.intent.action.LOCKED_BOOT_COMPLETED
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:17-86
+	android:name
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:19:25-83
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:17-79
+	android:name
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:20:25-76
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:17-82
+	android:name
+		ADDED from [:capacitor-local-notifications] C:\MAXI\ASLAB\LEARNING\FaceRecogDoor\smart-door-android\node_modules\@capacitor\local-notifications\android\build\intermediates\merged_manifest\debug\processDebugManifest\AndroidManifest.xml:21:25-79
 provider#androidx.startup.InitializationProvider
 ADDED from [androidx.emoji2:emoji2:1.3.0] C:\Users\taggh\.gradle\caches\8.14.3\transforms\353d69426d62513a7e19e841051a3a44\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] C:\Users\taggh\.gradle\caches\8.14.3\transforms\14a3b51da1167f75215e7e32d2231e74\transformed\lifecycle-process-2.6.2\AndroidManifest.xml:24:9-32:20

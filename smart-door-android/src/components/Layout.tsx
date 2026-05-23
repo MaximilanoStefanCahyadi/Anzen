@@ -21,9 +21,10 @@ import {
   Settings
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { ref, onValue, set, push } from "firebase/database";
+import { ref, onValue, set, push, query, limitToLast, onChildAdded } from "firebase/database";
 import { rtdb } from "@/lib/firebase";
 import { motion, AnimatePresence } from "motion/react";
+import { LocalNotifications } from '@capacitor/local-notifications';
 
 export default function Layout() {
   const { signOut, user } = useAuth();
@@ -54,6 +55,45 @@ export default function Layout() {
     const unsub = onValue(usersRef, (snapshot) => {
       setRegisteredFacesCount(snapshot.val() ? Object.keys(snapshot.val()).length : 0);
     });
+    return () => unsub();
+  }, []);
+
+  useEffect(() => {
+    if (!rtdb) return;
+
+    let isInitialized = false;
+    const logsRef = query(ref(rtdb, "logs"), limitToLast(1));
+
+    const unsub = onChildAdded(logsRef, async (snapshot) => {
+      if (!isInitialized) {
+        isInitialized = true;
+        return;
+      }
+
+      const log = snapshot.val();
+      if (log && (log.name === "UNKNOWN" || log.method === "Intruder Alert")) {
+        try {
+          const permissions = await LocalNotifications.checkPermissions();
+          if (permissions.display !== 'granted') {
+            await LocalNotifications.requestPermissions();
+          }
+
+          await LocalNotifications.schedule({
+            notifications: [
+              {
+                title: "⚠️ Security Alert: Unknown Person Detected!",
+                body: "An intruder has been spotted at the front door.",
+                id: Math.floor(Math.random() * 100000),
+                extra: { logId: snapshot.key }
+              }
+            ]
+          });
+        } catch (error) {
+          console.error("Local notification error:", error);
+        }
+      }
+    });
+
     return () => unsub();
   }, []);
 
