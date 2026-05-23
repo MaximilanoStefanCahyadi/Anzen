@@ -5,14 +5,14 @@ import { getStorage, type FirebaseStorage } from "firebase/storage";
 import { getDatabase, type Database } from "firebase/database";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB44ufKVY86OCFAyinUfPIvWBf1HYFAa7c",
-  authDomain: "mobile-embeded-system.firebaseapp.com",
-  databaseURL: "https://mobile-embeded-system-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "mobile-embeded-system",
-  storageBucket: "mobile-embeded-system.firebasestorage.app",
-  messagingSenderId: "502012695941",
-  appId: "1:502012695941:web:09184a55817d514682a0ec",
-  measurementId: "G-84HRSFFM5T"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  databaseURL: import.meta.env.VITE_FIREBASE_DATABASE_URL,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 let app: FirebaseApp | undefined;
