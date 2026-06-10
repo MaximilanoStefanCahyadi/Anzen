@@ -1,25 +1,30 @@
-# ==========================================
-# 1. AI, FACE RECOGNITION & COMPUTER VISION
-# ==========================================
-opencv-python==4.9.0.80
-dlib @ file:///C:/MAXI/ASLAB/LEARNING/FaceRecogDoor/ai-controller/dlib-19.22.99-cp310-cp310-win_amd64.whl
-face-recognition==1.3.0
-cvzone==1.6.1
-pyzbar==0.1.9
-numpy==1.26.4
+# ============================================================
+# Smart Door Lock - Requirements
+# Install semua dependensi dengan:
+#   pip install -r requirements.txt
+#
+# Catatan sistem (install via apt, BUKAN pip):
+#   sudo apt install libzbar0          # pyzbar (QR scanner)
+#   sudo apt install libopenblas-dev   # numpy performance di Raspberry Pi
+#   sudo apt install cmake             # dibutuhkan saat build dlib
+#   sudo apt install libatlas-base-dev # dibutuhkan dlib di Raspberry Pi
+# ============================================================
 
-# ==========================================
-# 2. WEB FRAMEWORK & API
-# ==========================================
-Flask==3.1.3
-flask-cors==6.0.2
+# --- Computer Vision ---
+opencv-python==4.10.0.84        # cv2: kamera, render, resize frame
 
-# ==========================================
-# 3. CLOUD INTEGRATION & DATABASE
-# ==========================================
-firebase_admin==7.1.0
+# --- Face Recognition ---
+face-recognition==1.3.0         # face_recognition: deteksi & encoding wajah
+dlib==19.24.6                   # dependensi wajib face-recognition
+numpy==1.26.4                   # array encoding wajah & operasi matrix
 
-# ==========================================
-# 4. HARDWARE COMMUNICATION (SERIAL)
-# ==========================================
-pyserial==3.5
+# --- QR Code Scanner ---
+pyzbar==0.1.9                   # decode QR code dari frame kamera
+# WAJIB: sudo apt install libzbar0
+
+# --- Firebase ---
+firebase-admin==6.5.0           # Realtime Database: logs, queue, tokens, health
+
+# --- GPIO (Raspberry Pi only) ---
+gpiozero==2.0.1                 # kontrol relay solenoid via GPIO pin
+RPi.GPIO==0.7.1                 # backend GPIO untuk gpiozero di Raspberry Pi
