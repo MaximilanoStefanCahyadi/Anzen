@@ -85,7 +85,7 @@ A mobile client wrapped using **Capacitor** + React + TS to control system confi
 /door_status       # "Open" | "Closed" | "Unlocked"
 /door_commands/    # Push keys containing command queues: { command: "OPEN", requestedBy: "admin@email.com" }
 /logs/             # Pushed records: { name: "MAX", method: "Face ID", timestamp: "YYYY-MM-DD HH:MM:SS", snapshot: "base64..." }
-/registration_queue/# New enrollments: { name: "John", image_base64: "base64..." }
+/registration_queue/ # New enrollments: { name: "John", image_base64: "base64..." }
 /registered_face/  # Verified face profiles synced to the cloud.
 /guest_tokens/     # One-time tokens: { guestName: "Tamo", token: "Q478KHRR", status: "active"|"used"|"expired", expiresAt: "ISO_Date" }
 /system_health/    # Pi heartbeat: { last_seen: Timestamp, camera_active: bool, relay_active: bool, qr_enabled: bool }
