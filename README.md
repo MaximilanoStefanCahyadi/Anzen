@@ -16,6 +16,11 @@ The system is divided into three primary software modules synchronized in real-t
 
 ![Software Ecosystem Diagram](./assets/software_diagram.png)
 
+### 3. Integrated System Architecture
+This unified system diagram illustrates the real-time input flow, Edge Node execution (Raspberry Pi 4), Cloud sync via Firebase, and final hardware actuation:
+
+![System Architecture Diagram](./assets/system_architecture.svg)
+
 ---
 
 ## 🛠️ Hardware Ecosystem

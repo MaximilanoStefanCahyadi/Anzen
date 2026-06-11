@@ -1,0 +1,301 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <!-- Definitions for Markers and Styles -->
+  <defs>
+    <!-- Shadows -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#2C2A29" flood-opacity="0.06" />
+    </filter>
+    <filter id="shadow-large" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#2C2A29" flood-opacity="0.08" />
+    </filter>
+    
+    <!-- Arrows Markers -->
+    <marker id="arrow-gray" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#94A3B8" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#6C8069" />
+    </marker>
+    <marker id="arrow-purple" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#8B5CF6" />
+    </marker>
+    <marker id="arrow-orange" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#E96B4F" />
+    </marker>
+
+    <!-- Styles -->
+    <style>
+      .title { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif; font-weight: 800; fill: #2C2A29; }
+      .subtitle { font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #6B7280; }
+      .badge-text { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif; font-weight: bold; font-size: 11px; fill: #FFFFFF; letter-spacing: 0.5px; }
+      .box-title { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif; font-weight: 700; font-size: 14px; }
+      .box-desc { font-family: 'Inter', system-ui, sans-serif; font-size: 11.5px; fill: #4B5563; line-height: 1.5; }
+      .lane-label { font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif; font-weight: 850; font-size: 12px; fill: #4B5563; letter-spacing: 1.5px; }
+      .conn-label { font-family: 'Inter', system-ui, sans-serif; font-size: 10.5px; font-weight: 600; fill: #6B7280; }
+    </style>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1000" height="1000" fill="#FDFBF7" />
+
+  <!-- Main System Title -->
+  <g transform="translate(0, 15)">
+    <text x="500" y="30" class="title" font-size="22" text-anchor="middle">Desain &amp; Integrasi Sistem — Smart Door Lock Ecosystem</text>
+    <text x="500" y="50" class="subtitle" text-anchor="middle">Arsitektur Edge IoT berbasis Raspberry Pi 4, Autentikasi Dual-Mode, &amp; Cloud Database</text>
+  </g>
+
+  <!-- Lane Separators (Dashed grid lines) -->
+  <line x1="60" y1="210" x2="960" y2="210" stroke="#E6E3DC" stroke-dasharray="6,6" stroke-width="1.5" />
+  <line x1="60" y1="490" x2="960" y2="490" stroke="#E6E3DC" stroke-dasharray="6,6" stroke-width="1.5" />
+  <line x1="60" y1="720" x2="960" y2="720" stroke="#E6E3DC" stroke-dasharray="6,6" stroke-width="1.5" />
+
+  <!-- ========================================== -->
+  <!-- LANE 1: INPUT                              -->
+  <!-- ========================================== -->
+  <!-- Lane Badge -->
+  <g transform="translate(20, 100)">
+    <rect x="0" y="0" width="30" height="90" rx="8" fill="#E6E3DC" />
+    <text x="15" y="45" class="lane-label" text-anchor="middle" transform="rotate(-90 15 45)">INPUT</text>
+  </g>
+
+  <!-- Box: Webcam / Kamera -->
+  <g transform="translate(100, 85)" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="95" rx="16" fill="#FFFFFF" stroke="#E6E3DC" stroke-width="1.5" />
+    <!-- Indicator Pill -->
+    <rect x="18" y="15" width="90" height="20" rx="10" fill="#EBF0EC" />
+    <circle cx="28" cy="25" r="4" fill="#6C8069" />
+    <text x="38" y="29" font-family="Inter" font-weight="bold" font-size="10" fill="#6C8069">CAMERA NODE</text>
+    
+    <text x="18" y="55" class="box-title" fill="#2C2A29">Webcam / Kamera USB</text>
+    <text x="18" y="75" class="box-desc">• Tangkap frame real-time 30 FPS</text>
+    <text x="210" y="75" class="box-desc">• Umpan video ke algoritma AI</text>
+  </g>
+
+  <!-- Box: Admin Upload Foto -->
+  <g transform="translate(550, 85)" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="95" rx="16" fill="#FBF9F6" stroke="#E96B4F" stroke-width="1.5" stroke-opacity="0.3" />
+    <!-- Indicator Pill -->
+    <rect x="18" y="15" width="90" height="20" rx="10" fill="#FDF1EE" />
+    <circle cx="28" cy="25" r="4" fill="#E96B4F" />
+    <text x="38" y="29" font-family="Inter" font-weight="bold" font-size="10" fill="#E96B4F">ADMIN PORTAL</text>
+    
+    <text x="18" y="55" class="box-title" fill="#2C2A29">Admin Registrasi Wajah</text>
+    <text x="18" y="75" class="box-desc">• Unggah foto via Web Dashboard</text>
+    <text x="210" y="75" class="box-desc">• Daftarkan penghuni baru</text>
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- LANE 2: EDGE (Raspberry Pi)                -->
+  <!-- ========================================== -->
+  <!-- Lane Badge -->
+  <g transform="translate(20, 275)">
+    <rect x="0" y="0" width="30" height="150" rx="8" fill="#EBF0EC" />
+    <text x="15" y="75" class="lane-label" fill="#6C8069" text-anchor="middle" transform="rotate(-90 15 75)">EDGE NODE</text>
+  </g>
+
+  <!-- Edge boundary container representation (Dotted line box for Raspberry Pi 4) -->
+  <rect x="75" y="235" width="850" height="235" rx="20" fill="none" stroke="#6C8069" stroke-dasharray="8,6" stroke-width="2" opacity="0.6" />
+  
+  <!-- Boundary Label Badge -->
+  <g transform="translate(95, 224)" filter="url(#shadow)">
+    <rect x="0" y="0" width="380" height="22" rx="6" fill="#6C8069" />
+    <text x="190" y="15" class="badge-text" text-anchor="middle">EDGE COMPUTING — Python Controller berjalan di Raspberry Pi</text>
+  </g>
+
+  <!-- Box: AI Loop (Face ID) -->
+  <g transform="translate(100, 275)" filter="url(#shadow)">
+    <rect x="0" y="0" width="245" height="165" rx="16" fill="#FFFFFF" stroke="#6C8069" stroke-width="1.5" />
+    <rect x="15" y="15" width="65" height="18" rx="9" fill="#EBF0EC" />
+    <text x="47" y="27" font-family="Inter" font-weight="bold" font-size="9" fill="#6C8069" text-anchor="middle">BIOMETRIC</text>
+    
+    <text x="15" y="52" class="box-title" fill="#2C2A29">AI Loop: Face ID</text>
+    <text x="15" y="75" class="box-desc">• Model kecil dlib HOG (5x cepat)</text>
+    <text x="15" y="93" class="box-desc">• Face Encodings 128-Dimension</text>
+    <text x="15" y="111" class="box-desc">• Autentikasi Hold Time: 2 detik</text>
+    <text x="15" y="129" class="box-desc">• Optimasi FRAME_SKIP = 3 &amp; Resize</text>
+  </g>
+
+  <!-- Box: QR Scanner -->
+  <g transform="translate(380, 275)" filter="url(#shadow)">
+    <rect x="0" y="0" width="240" height="165" rx="16" fill="#FFFFFF" stroke="#4B5563" stroke-width="1.2" stroke-opacity="0.4" />
+    <rect x="15" y="15" width="60" height="18" rx="9" fill="#F3F4F6" />
+    <text x="45" y="27" font-family="Inter" font-weight="bold" font-size="9" fill="#4B5563" text-anchor="middle">QR READER</text>
+    
+    <text x="15" y="52" class="box-title" fill="#2C2A29">QR Code Scanner</text>
+    <text x="15" y="75" class="box-desc">• Library pyzbar decoder</text>
+    <text x="15" y="93" class="box-desc">• Pindai Guest Pass sementara</text>
+    <text x="15" y="111" class="box-desc">• Validasi token ke Firebase</text>
+    <text x="15" y="129" class="box-desc">• Rescan Cooldown: 5 detik</text>
+  </g>
+
+  <!-- Box: Log & Sync -->
+  <g transform="translate(650, 275)" filter="url(#shadow)">
+    <rect x="0" y="0" width="250" height="165" rx="16" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5" stroke-opacity="0.6" />
+    <rect x="15" y="15" width="70" height="18" rx="9" fill="#FEF3C7" />
+    <text x="50" y="27" font-family="Inter" font-weight="bold" font-size="9" fill="#B45309" text-anchor="middle">SYNC ENGINE</text>
+    
+    <text x="15" y="52" class="box-title" fill="#2C2A29">Log &amp; Sync Daemon</text>
+    <text x="15" y="75" class="box-desc">• Background thread non-blocking</text>
+    <text x="15" y="93" class="box-desc">• Auto-expire Guest Token (60s)</text>
+    <text x="15" y="111" class="box-desc">• Health check ping interval 3s</text>
+    <text x="15" y="129" class="box-desc">• Simpan lokal &amp; offline logging</text>
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- LANE 3: CLOUD INFRASTRUCTURE               -->
+  <!-- ========================================== -->
+  <!-- Lane Badge -->
+  <g transform="translate(20, 540)">
+    <rect x="0" y="0" width="30" height="120" rx="8" fill="#F5F3FF" />
+    <text x="15" y="60" class="lane-label" fill="#8B5CF6" text-anchor="middle" transform="rotate(-90 15 60)">CLOUD</text>
+  </g>
+
+  <!-- Box: Web Dashboard (React) -->
+  <g transform="translate(100, 525)" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="150" rx="16" fill="#FDFBFC" stroke="#8B5CF6" stroke-width="1.5" />
+    <rect x="15" y="15" width="95" height="18" rx="9" fill="#F5F3FF" />
+    <text x="62" y="27" font-family="Inter" font-weight="bold" font-size="9" fill="#8B5CF6" text-anchor="middle">ADMIN CONSOLE</text>
+    
+    <text x="15" y="52" class="box-title" fill="#2C2A29">Web Dashboard (React.js)</text>
+    <text x="15" y="75" class="box-desc">• Lihat log riwayat akses &amp; snapshot wajah</text>
+    <text x="15" y="93" class="box-desc">• Tombol Buka Darurat (Remote Unlock command)</text>
+    <text x="15" y="111" class="box-desc">• Pendaftaran wajah (Registrasi antrean)</text>
+    <text x="15" y="129" class="box-desc">• Pembuat Guest Pass QR Code instan &amp; aman</text>
+  </g>
+
+  <!-- Box: Firebase Realtime Database -->
+  <g transform="translate(550, 525)" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="150" rx="16" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5" />
+    <rect x="15" y="15" width="105" height="18" rx="9" fill="#FEF3C7" />
+    <text x="67" y="27" font-family="Inter" font-weight="bold" font-size="9" fill="#B45309" text-anchor="middle">DATABASE NODE</text>
+    
+    <text x="15" y="52" class="box-title" fill="#2C2A29">Firebase Realtime DB</text>
+    <text x="15" y="72" class="box-desc">• /door_status &amp; /door_commands (Perintah gerak)</text>
+    <text x="15" y="90" class="box-desc">• /logs (Riwayat masuk + snapshot base64)</text>
+    <text x="15" y="108" class="box-desc">• /registration_queue &amp; /registered_face</text>
+    <text x="15" y="126" class="box-desc">• /guest_tokens &amp; /system_health (Status Pi)</text>
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- LANE 4: HARDWARE & ACTUATORS               -->
+  <!-- ========================================== -->
+  <!-- Lane Badge -->
+  <g transform="translate(20, 770)">
+    <rect x="0" y="0" width="30" height="150" rx="8" fill="#FDF1EE" />
+    <text x="15" y="75" class="lane-label" fill="#E96B4F" text-anchor="middle" transform="rotate(-90 15 75)">HARDWARE</text>
+  </g>
+
+  <!-- Box: GPIO Interface -->
+  <g transform="translate(100, 765)" filter="url(#shadow)">
+    <rect x="0" y="0" width="245" height="160" rx="16" fill="#FFFFFF" stroke="#6C8069" stroke-width="1.5" />
+    <rect x="15" y="15" width="85" height="18" rx="9" fill="#EBF0EC" />
+    <text x="57" y="27" font-family="Inter" font-weight="bold" font-size="9" fill="#6C8069" text-anchor="middle">GPIO INTERFACE</text>
+    
+    <text x="15" y="52" class="box-title" fill="#2C2A29">Raspberry Pi GPIO Pin</text>
+    <text x="15" y="75" class="box-desc">• Driver logic: gpiozero.OutputDevice</text>
+    <text x="15" y="93" class="box-desc">• Pin Fisik 11 (GPIO 17 BCM)</text>
+    <text x="15" y="111" class="box-desc">• Konfigurasi Active-Low (Aman)</text>
+    <text x="15" y="129" class="box-desc">• Mengirim sinyal LOW untuk unlock</text>
+  </g>
+
+  <!-- Box: Relay & Solenoid -->
+  <g transform="translate(380, 765)" filter="url(#shadow)">
+    <rect x="0" y="0" width="240" height="160" rx="16" fill="#FDF1EE" stroke="#E96B4F" stroke-width="1.5" />
+    <rect x="15" y="15" width="85" height="18" rx="9" fill="#FDE1DC" />
+    <text x="57" y="27" font-family="Inter" font-weight="bold" font-size="9" fill="#E96B4F" text-anchor="middle">DOOR SOLENOID</text>
+    
+    <text x="15" y="52" class="box-title" fill="#2C2A29">Relay &amp; Solenoid Lock</text>
+    <text x="15" y="75" class="box-desc">• Modul Relai Optocoupler 5V</text>
+    <text x="15" y="93" class="box-desc">• Solenoid Elektromagnetik 12V</text>
+    <text x="15" y="111" class="box-desc">• Hold Open: 3 detik (Tarik Besi)</text>
+    <text x="15" y="129" class="box-desc">• Mekanis Spring (Auto-kunci otomatis)</text>
+  </g>
+
+  <!-- Box: Catu Daya Baterai -->
+  <g transform="translate(650, 765)" filter="url(#shadow)">
+    <rect x="0" y="0" width="250" height="160" rx="16" fill="#FEF2F2" stroke="#EF4444" stroke-width="1.5" />
+    <rect x="15" y="15" width="75" height="18" rx="9" fill="#FEE2E2" />
+    <text x="52" y="27" font-family="Inter" font-weight="bold" font-size="9" fill="#EF4444" text-anchor="middle">POWER UNIT</text>
+    
+    <text x="15" y="52" class="box-title" fill="#2C2A29">Catu Daya Eksternal</text>
+    <text x="15" y="75" class="box-desc">• Baterai 3S LiPo (11.1V - 12.6V)</text>
+    <text x="15" y="93" class="box-desc">• Menyediakan arus tinggi (1A-2A)</text>
+    <text x="15" y="111" class="box-desc">• Sirkuit daya terisolasi penuh</text>
+    <text x="15" y="129" class="box-desc">• Mencegah kerusakan pada board Pi</text>
+  </g>
+
+
+  <!-- ========================================== -->
+  <!-- CONNECTIONS & ARROWS FLOW                  -->
+  <!-- ========================================== -->
+  <!-- 1. Webcam Frame Feeding -->
+  <path d="M 275 180 L 275 220 L 222 220 L 222 270" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow-gray)" />
+  <path d="M 275 220 L 500 220 L 500 270" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow-gray)" />
+  <text x="325" y="215" class="conn-label" text-anchor="middle">Frame Video (30fps)</text>
+
+  <!-- 2. Web Upload Face Registration -->
+  <path d="M 725 180 L 725 500 L 275 500 L 275 520" fill="none" stroke="#8B5CF6" stroke-width="2" marker-end="url(#arrow-purple)" />
+  <text x="645" y="495" class="conn-label" fill="#8B5CF6">Upload Foto Wajah Baru</text>
+
+  <!-- 3. Web <=> Firebase Sync -->
+  <path d="M 450 580 L 545 580" fill="none" stroke="#8B5CF6" stroke-width="2" marker-end="url(#arrow-purple)" />
+  <path d="M 550 615 L 455 615" fill="none" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrow-orange)" />
+  <text x="497" y="575" class="conn-label" fill="#8B5CF6" text-anchor="middle">Write / Cmd</text>
+  <text x="497" y="632" class="conn-label" fill="#B45309" text-anchor="middle">Realtime Sync</text>
+
+  <!-- 4. QR Token Validation Query (QR Scanner => Firebase) -->
+  <path d="M 500 440 L 500 470 L 610 470 L 610 520" fill="none" stroke="#94A3B8" stroke-width="2" marker-end="url(#arrow-gray)" />
+  <text x="565" y="485" class="conn-label" text-anchor="middle">Validate Guest Token</text>
+
+  <!-- 5. Log Submissions (Log & Sync Daemon => Firebase) -->
+  <path d="M 775 440 L 775 520" fill="none" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrow-orange)" />
+  <text x="785" y="485" class="conn-label" fill="#B45309">Push Log / Health Ping</text>
+
+  <!-- 6. Queue Sync (Firebase => Edge AI Loop Registration) -->
+  <path d="M 680 525 L 680 460 L 320 460 L 320 445" fill="none" stroke="#F59E0B" stroke-width="2" marker-end="url(#arrow-orange)" />
+  <text x="500" y="455" class="conn-label" fill="#B45309" text-anchor="middle">Sync Antrean Wajah &amp; Remote Commands</text>
+
+  <!-- 7. GPIO Signal Control (AI Loop => GPIO Relay Pin) -->
+  <path d="M 222 440 L 222 760" fill="none" stroke="#6C8069" stroke-width="2.5" stroke-dasharray="5,3" marker-end="url(#arrow-green)" />
+  <text x="212" y="695" class="conn-label" fill="#6C8069" text-anchor="end" transform="rotate(-90 212 695)">Sinyal Aktif / Non-Aktif (GPIO 17 BCM)</text>
+
+  <!-- 8. Physical Circuit Switching (Relay => Solenoid) -->
+  <path d="M 345 845 L 375 845" fill="none" stroke="#E96B4F" stroke-width="2" marker-end="url(#arrow-orange)" />
+  <text x="360" y="837" class="conn-label" fill="#E96B4F" text-anchor="middle">Saklar Daya</text>
+
+  <!-- 9. Catu Daya Loop (Battery Power Source => Solenoid / Relay) -->
+  <path d="M 650 845 L 625 845" fill="none" stroke="#EF4444" stroke-width="2" marker-end="url(#arrow-orange)" />
+  <text x="637" y="837" class="conn-label" fill="#EF4444" text-anchor="middle">12V DC</text>
+
+  <!-- ========================================== -->
+  <!-- DIAGRAM LEGEND                             -->
+  <!-- ========================================== -->
+  <g transform="translate(100, 955)">
+    <!-- Legend Label -->
+    <text x="0" y="15" font-family="Plus Jakarta Sans" font-weight="bold" font-size="12" fill="#2C2A29">LEGENDA COMPONENT:</text>
+    
+    <!-- Legend Items -->
+    <g transform="translate(180, 0)">
+      <rect x="0" y="3" width="12" height="12" rx="3" fill="#EBF0EC" stroke="#6C8069" stroke-width="1.5" />
+      <text x="18" y="13" font-family="Inter" font-size="11" fill="#4B5563">Edge / RPi / AI</text>
+    </g>
+    
+    <g transform="translate(320, 0)">
+      <rect x="0" y="3" width="12" height="12" rx="3" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1.5" />
+      <text x="18" y="13" font-family="Inter" font-size="11" fill="#4B5563">Web / React / Cloud</text>
+    </g>
+    
+    <g transform="translate(490, 0)">
+      <rect x="0" y="3" width="12" height="12" rx="3" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5" />
+      <text x="18" y="13" font-family="Inter" font-size="11" fill="#4B5563">Firebase DB / Sync</text>
+    </g>
+    
+    <g transform="translate(660, 0)">
+      <rect x="0" y="3" width="12" height="12" rx="3" fill="#FDF1EE" stroke="#E96B4F" stroke-width="1.5" />
+      <text x="18" y="13" font-family="Inter" font-size="11" fill="#4B5563">Hardware / Solenoid</text>
+    </g>
+  </g>
+</svg>
